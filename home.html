@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Home</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="navigation">          
+
+            <a href="index.php"><button class="btn" style="color: white;">Change profile</button></a>
+            <a href="log_out.html"><button class="btn" style="color: white;">Log out</button></a>
+
+        </div>
+        
+        <main>
+            <?php
+                <?php
+                session_start(); // Important if you're using session variables
+
+                $res_Uname = $_SESSION['username']; // Example
+                $res_Email = $_SESSION['email'];    // Example
+                echo "RES_NAME $res_Uname";
+                ?>
+            <div class="main-box top">
+               <div class="top">
+                <div class="box">
+                    <p>Hello <b><?php echo $res_Uname ?></b></p>
+                </div>
+               <div class="box">
+                <p>Your email is <b><?php echo $res_Email ?></b>.</p>
+               </div>
+            </div>
+        </main>
+    </body>
+</html>
