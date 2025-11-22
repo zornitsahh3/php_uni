@@ -105,8 +105,5 @@
     <div class="right_side">
         
     </div>  
-        <?php
-        // put your code here
-        ?>
     </body>
 </html>
